@@ -3,6 +3,12 @@
   <form class="form">
     <div class="input-group">
       <label class="label" for="name">name</label>
+
+      <!-- 
+       I was use the # (hash) to tell Angular to assign those tags
+        to a local variable. By adding the #title #address and #description to the appropriate <input/> 
+        elements, we can pass them as variables into the addArticle() function on the button!
+       -->
       <input type="text" class="input" id="name" placeholder="name" #name />
     </div>
     <div class="input-group">
