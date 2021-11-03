@@ -1,1 +1,26 @@
-<h1>{{ title }}</h1>
+<div class="container">
+  <h1 class="title">{{ title }}</h1>
+  <form class="form">
+    <div class="input-group">
+      <label class="label" for="name">name</label>
+      <input type="text" class="input" id="name" placeholder="name" />
+    </div>
+    <div class="input-group">
+      <label class="label" for="address">address</label>
+      <input type="text" class="input" id="address" placeholder="address" />
+    </div>
+    <div class="input-group">
+      <label class="label" for="description">description</label>
+      <input
+        type="text"
+        class="input"
+        placeholder="description"
+        id="description"
+      />
+    </div>
+    <div class="btn-container">
+      <button type="submit" class="btn">add</button>
+    </div>
+  </form>
+  <app-list-restaurants></app-list-restaurants>
+</div>
