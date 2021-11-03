@@ -3,11 +3,17 @@
   <form class="form">
     <div class="input-group">
       <label class="label" for="name">name</label>
-      <input type="text" class="input" id="name" placeholder="name" />
+      <input type="text" class="input" id="name" placeholder="name" #name />
     </div>
     <div class="input-group">
       <label class="label" for="address">address</label>
-      <input type="text" class="input" id="address" placeholder="address" />
+      <input
+        type="text"
+        class="input"
+        id="address"
+        placeholder="address"
+        #address
+      />
     </div>
     <div class="input-group">
       <label class="label" for="description">description</label>
@@ -16,14 +22,23 @@
         class="input"
         placeholder="description"
         id="description"
+        #description
       />
     </div>
     <div class="btn-container">
-      <button type="submit" class="btn">add</button>
+      <button
+        type="submit"
+        class="btn"
+        (click)="addRestaurant(name, address, description)"
+      >
+        add
+      </button>
     </div>
   </form>
   <div class="restaurants">
-    <app-restaurant></app-restaurant>
-    <app-restaurant></app-restaurant>
+    <app-restaurant
+      *ngFor="let restaurant of sortRestaurants()"
+      [restaurant]="restaurant"
+    ></app-restaurant>
   </div>
 </div>
